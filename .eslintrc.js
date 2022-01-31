@@ -41,7 +41,7 @@ module.exports = {
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
     'class-methods-use-this': 'off',
-    curly: ['error', 'all'],
+    curly: ['error', 'multi'],
     'func-style': ['error', 'expression', { allowArrowFunctions: true }],
     'jest/consistent-test-it': ['error', { fn: 'it' }],
     'import/extensions': [
