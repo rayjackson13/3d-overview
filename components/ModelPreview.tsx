@@ -1,4 +1,4 @@
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, Stats } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Bloom, DepthOfField, EffectComposer, Noise, Vignette } from '@react-three/postprocessing';
 import React from 'react';
@@ -28,8 +28,8 @@ export const ModelPreview = ({ children }: Props): JSX.Element => (
     <OrbitControls
       autoRotate
       autoRotateSpeed={1}
-      enablePan={false}
-      enableZoom={false}
+      enablePan
+      enableZoom
       makeDefault
       maxPolarAngle={Math.PI / 2.3}
       minPolarAngle={Math.PI / 2.3}
@@ -53,5 +53,7 @@ export const ModelPreview = ({ children }: Props): JSX.Element => (
       <Noise opacity={0.02} />
       <Vignette darkness={0.3} eskil={false} offset={0.1} />
     </EffectComposer>
+
+    <Stats showPanel={0} />
   </Canvas>
 );

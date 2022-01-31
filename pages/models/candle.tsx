@@ -1,20 +1,20 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import { Candle } from 'components/Candle';
 import { ModelPreview } from 'components/ModelPreview';
-import { Sphere } from 'components/Sphere';
 import styles from 'styles/Model.module.css';
 
-const CubePage: NextPage = () => (
+const CandlePage: NextPage = () => (
   <div className={styles.page}>
     <Head>
-      <title>Sphere | 3D Models</title>
+      <title>Candle | 3D Models</title>
     </Head>
 
     <ModelPreview>
-      <Sphere color="violet" position={[0, 1.25, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5} />
+      <Candle position={[0, 1, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={2} />
     </ModelPreview>
   </div>
 );
 
-export default CubePage;
+export default CandlePage;
